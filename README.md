@@ -27,7 +27,7 @@ Class is a blueprint or template of a real-world entity.
 - It binds the values to the instance variables conviniently.
 - You can also create a constructor that accepts a full object inside it.
 - You can also call one constructor from another constructor.
-    - ``` Student() {
+     ``` Student() {
         this(1,"RandomPerson..",95);
       } ```
 
