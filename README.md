@@ -27,9 +27,11 @@ Class is a blueprint or template of a real-world entity.
 - It binds the values to the instance variables conviniently.
 - You can also create a constructor that accepts a full object inside it.
 - You can also call one constructor from another constructor.
-     ``` Student() {
+     ```
+     Student() {
         this(1,"RandomPerson..",95);
-      } ```
+      }
+     ```
 
 ### this Keyword
 - It is used to access the "reference variable" ke "instance variable".
@@ -39,15 +41,19 @@ Class is a blueprint or template of a real-world entity.
 ### final keyword 
  - final int i = 10; it makes the variable as constant, and no changes can be made to it later.
  - But this is only true for primitive datatypes. Because for objects, it gets complicated.
- - ```final Student s1 = new Student("Pranay");
+  ```
+   final Student s1 = new Student("Pranay");
    s1.name = "Parikh"; //valid
-   s1 = new Student("Parikh); //invalid ```
+   s1 = new Student("Parikh); //invalid
+```
 
 ### Garbage Collection
  - It is automatically handled by java, but we get the chance to do something specific whenever the object is removed and destroyed by the Grabage Collector.
- - ```   @Override  
+ - ```
+   @Override  
     protected void finalize()   
     {   
         System.out.println("finalize method called");   
-    }   ```
+    }
+   ```
    
