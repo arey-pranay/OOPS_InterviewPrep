@@ -1,5 +1,6 @@
 # OOPS_InterviewPrep
 ## Extra
+ - All classes extend the "Object" class.
  - Objects have "null" value by default ( including String )
  - 84.5f converts it to float or somethign, ig
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
@@ -149,7 +150,7 @@ public class ST {
    - 2. It is used when parent and child have a common named var, but you want to access the parent class var or function
    Let's say both 2D and 3D have a material variable, then from 3D (Child) if you want to access the 2D's (Parent's) material, then you do the following:
    System.out.println(super.material);
-- ##### Trying something weird
+- ##### Trying something weird (Upcasting)
    - Parent p = new Child(); //valid
    - It is the type of the reference variable and not the type of the object, that determines what members can or cannot be accessed.
    - So 'p' cannot access the properties of Child class.
@@ -167,5 +168,14 @@ public class ST {
   - Multiple Ways to represent the same thing
   - e.g. creating a shape class with a default function for area, and then having multiple types of shapes as its children, each having their own area function.
   - The function called is dependant on the type of object and not type of reference variable.
-  - Compile Time vs Run Time
-  - What all makes 2 functions different ? (overloading)
+  - Types of Polymorphism
+     - Compile Time (Static) (By Overloading) Same Name but either different arg type, return type, order of args, or different no. of args
+     - Runtime (Dynamic) (By Overriding), When everything is same. @Override annotations can be used.
+   - When you say Shapes s = new Circle(); and then s.area(), then Shapes must have a function called "area()" and then while executing, firstly the area() method will be checked under Circle, because the object type is circle.
+   - So the existence or Static stuff depends on LHS or the reference variable. (At compile Time)
+   - And the decision of what to execute or Dynamic stuff depends on RHS or the object type. (At runtime)
+   - So LHS decides what can be accessed, RHS decides what exactly will be accessed.
+   - This is called Dynamic Method Dispatch or "Late Binding".
+   - But if you put "final" in front of a method, then it cannot be overriden, and it is then called "Early Binding"
+   - Similarly static methods also cannot be overriden.
+   - The instance variables also are never overloaded or overriden.
