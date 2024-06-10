@@ -56,4 +56,15 @@ Class is a blueprint or template of a real-world entity.
         System.out.println("finalize method called");   
     }
    ```
-   
+
+### Packages
+ - It can be thought of as a package.
+ - It helps you create compartments for the classes that you creaate and also solve the naming conflicts for different classes.
+ - Outside a package, you can access only the public elements of a class.
+
+### static keyword
+ - Properties or functions that are independant of the object, are marked as static.
+ - They belong to the class. It implies that you can use it without creating an object of that class.
+ - Updating a static variable inside a function is achieved by classname.variable instead of this.variable
+ - Inside a static method, you can only use static variables and methods.
+ - 
