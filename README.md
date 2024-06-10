@@ -5,6 +5,7 @@
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
  ##  Doubts
  - What is "super" and "@Override" and access specifiers and wrapper classes exactly ?
+ - 
 ## Classes
 
 Class is a blueprint or template of a real-world entity.
@@ -84,5 +85,29 @@ public class Solution {
         System.out.println("I am in static block");
         b = a * 5;
     }
+}
+```
+
+### Singleton Classes
+- Classes of which only 1 object can be created.
+- So you are not publicly allowed to use the constructor. Use a public method to call that constructor and return the same object everytime from that function.
+- You can privately maintain an instance of your class and privately call the constructor depending on if that instance already exists.
+```
+public class Singleton {
+    private Singleton () {
+
+    }
+
+    private static Singleton instance;
+
+    public static Singleton getInstance() {
+        // check whether 1 obj only is created or not
+        if (instance == null) {
+            instance = new Singleton();
+        }
+
+        return instance;
+    }
+
 }
 ```
