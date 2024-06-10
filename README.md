@@ -179,3 +179,19 @@ public class ST {
    - But if you put "final" in front of a method, then it cannot be overriden, and it is then called "Early Binding"
    - Similarly static methods also cannot be overriden.
    - The instance variables also are never overloaded or overriden.
+
+``` not really sure about encapsulation vs abstraction ```
+
+### Encapsulation
+- Keeping the stuff categorized and properly organized
+- It solves the design level issue.
+- It focuses on external part.
+- Private, Public, Protected, getters, setters etc.
+
+### Abstraction
+ - Hiding unnecessary detail
+ - It solves the code level issue.
+ - It focuses on internal part.
+ - Interfaces, Abstract Classes/
+
+![Abstraction Vs Encapsulation](https://github.com/arey-pranay/OOPS_InterviewPrep/assets/86497126/38273da1-71ad-4f25-95e2-ec15511976e4)
