@@ -124,7 +124,9 @@ public class ST {
 - The property is first looked into the Child Class and then the Parent Class.
 - Children cannot access private members of Parent Class.
 - Parent class object cannot Child class.
+  
 - ###### Super Keyword
+  
    -  1.  It is used to call the constructor of the parent class from the child class.
    - ```
      public 2D{
@@ -138,7 +140,7 @@ public class ST {
      public 3D extends 2D{
         int z;
         3D(int a, int b, int c){
-           super(a,b);
+           super(a,b); //always initialize supercalss before child class
            this.z = c;
          }
      }
@@ -146,13 +148,24 @@ public class ST {
    
    - 2. It is used when parent and child have a common named var, but you want to access the parent class var or function
    Let's say both 2D and 3D have a material variable, then from 3D (Child) if you want to access the 2D's (Parent's) material, then you do the following:
-   
-   ```
-    System.out.println(super.material);
-   ```
+   System.out.println(super.material);
 - ##### Trying something weird
-   - Parent a = new Child(); //valid
+   - Parent p = new Child(); //valid
    - It is the type of the reference variable and not the type of the object, that determines what members can or cannot be accessed.
-   - So 'a' cannot access the properties of Child class.
+   - So 'p' cannot access the properties of Child class.
    - But Parent Classes don't always know all Child classes, therefore Child reference variable cannot be used to initialize parent object, because parent constructor will not have everything needed for a child reference variable.
-   -  
+   -  Child c = new Parent(); //invalid
+   -  In a parent class constructor that takes a parent object, you can also pass a child object, because everything that the parent needs, the child will have.
+   -  But the opposite is not true, you cannot give a parent object to a child constructor, because a child wants more than that.
+ - #### Types of Inheritence
+    - Single Inheritence
+    - Multi-level Inheritence
+    - Multiple Inheritence (Multiple Parents for 1 Child) (Not Allowed in Java) (We use Interfaces for this purpose)
+    - Heirarchical Inherience (1 Parent has Multiple Children)
+
+ ### Polymorphism
+  - Multiple Ways to represent the same thing
+  - e.g. creating a shape class with a default function for area, and then having multiple types of shapes as its children, each having their own area function.
+  - The function called is dependant on the type of object and not type of reference variable.
+  - Compile Time vs Run Time
+  - What all makes 2 functions different ? (overloading)
