@@ -111,3 +111,46 @@ public class ST {
     }
 }
 ```
+
+## Pillars of OOPS
+
+### Inheritence
+- There is a Base Class (Parent Class), and the Class derived from it is called Child Class
+-  ```
+   Class Child extends Base{
+
+   }
+   ```
+- The property is first looked into the Child Class and then the Parent Class.
+- Children cannot access private members of Parent Class.
+- Parent class object cannot Child class.
+- ###### Super Keyword
+   - 1. It is used to call the constructor of the parent class from the child class.
+   - ```
+     public 2D{
+        int x;
+        int y;
+        2D(int a, int b){
+           this.x = a;
+           this.y = b;
+         }
+     }
+     public 3D extends 2D{
+        int z;
+        3D(int a, int b, int c){
+           super(a,b);
+           this.z = c;
+         }
+     }
+   ```
+   - 2. It is used when parent and child have a common named var, but you want to access the parent class var or function
+   Let's say both 2D and 3D have a material variable, then from 3D (Child) if you want to access the 2D's (Parent's) material, then you do the following:
+   ```
+   System.out.println(super.material);
+   ```
+- ##### Trying something weird
+   - Parent a = new Child(); //valid
+   - It is the type of the reference variable and not the type of the object, that determines what members can or cannot be accessed.
+   - So 'a' cannot access the properties of Child class.
+   - But Parent Classes don't always know all Child classes, therefore Child reference variable cannot be used to initialize parent object, because parent constructor will not have everything needed for a child reference variable.
+   -  
