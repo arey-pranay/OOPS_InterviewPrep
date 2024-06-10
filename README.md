@@ -3,9 +3,10 @@
  - Objects have "null" value by default ( including String )
  - 84.5f converts it to float or somethign, ig
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
+ - The @Override is called an annotation. It  is not mandatory but you should use it to catch any errors in namiing or signatures, at compile time
  ##  Doubts
- - What is "super" and "@Override" and access specifiers and wrapper classes exactly ?
- - 
+ - What is "super" and access specifiers and wrapper classes exactly ?
+
 ## Classes
 
 Class is a blueprint or template of a real-world entity.
