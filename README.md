@@ -12,7 +12,7 @@ Class is a blueprint or template of a real-world entity.
   - e.g. the vehicle class is used to create cars bikes scooters. the car class is used by maruti, ferrari and BMW for their own custom use-cases, the last independant product is an object
 - Objects are stored in heap memory, but reference variables are stored in stack memory.
 - Instance variables are the variables declared inside the class and outside the method.
-- We use the dot (.) operator, aka the seperator to access the instance variables.
+- We use the dot (.) operator, aka the seperator to access the instance variables. It binds the instance variable to the reference variable.
 - Student s1 -> this is the declaration of a reference variable for an object in near future.
 
 ### new Keyword
@@ -67,4 +67,22 @@ Class is a blueprint or template of a real-world entity.
  - They belong to the class. It implies that you can use it without creating an object of that class.
  - Updating a static variable inside a function is achieved by classname.variable instead of this.variable
  - Inside a static method, you can only use static variables and methods.
- - 
+ - It is like, if you want to be executed, either make yourself static, or get an object to execute you.
+ - And since main function is static always, it's easier to create independant functions as static.
+ - Also, static functions don't have objects, you cannot use "this" keyword in static contexts.
+ - All static stuff is executed at compile-time because it has nothing to do with the classes' objects.
+
+### static block
+```
+public class Solution {
+    static int a = 4;
+    static int b;
+
+    // will only run once, when the first obj is create i.e. when the class is loaded for the first time
+   // so only when the first object is created, then this static block will be ran, from second object onwards, this will be like non-existent
+    static {
+        System.out.println("I am in static block");
+        b = a * 5;
+    }
+}
+```
