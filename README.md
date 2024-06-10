@@ -93,21 +93,20 @@ public class Solution {
 - So you are not publicly allowed to use the constructor. Use a public method to call that constructor and return the same object everytime from that function.
 - You can privately maintain an instance of your class and privately call the constructor depending on if that instance already exists.
 ```
-public class Singleton {
-    private Singleton () {
+public class ST {
+    //private constructor
+    private ST () {
 
     }
-
-    private static Singleton instance;
-
-    public static Singleton getInstance() {
+    //private static object
+    private static ST instance;
+    //public function to call from different classes.
+    public static ST getInstance() {
         // check whether 1 obj only is created or not
         if (instance == null) {
-            instance = new Singleton();
+            instance = new ST();
         }
-
         return instance;
     }
-
 }
 ```
