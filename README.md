@@ -125,7 +125,7 @@ public class ST {
 - Children cannot access private members of Parent Class.
 - Parent class object cannot Child class.
 - ###### Super Keyword
-   - 1. It is used to call the constructor of the parent class from the child class.
+   -  1.  It is used to call the constructor of the parent class from the child class.
    - ```
      public 2D{
         int x;
@@ -143,10 +143,12 @@ public class ST {
          }
      }
    ```
+   
    - 2. It is used when parent and child have a common named var, but you want to access the parent class var or function
    Let's say both 2D and 3D have a material variable, then from 3D (Child) if you want to access the 2D's (Parent's) material, then you do the following:
+   
    ```
-   System.out.println(super.material);
+    System.out.println(super.material);
    ```
 - ##### Trying something weird
    - Parent a = new Child(); //valid
