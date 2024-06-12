@@ -195,3 +195,11 @@ public class ST {
  - Interfaces, Abstract Classes/
 
 ![Abstraction Vs Encapsulation](https://github.com/arey-pranay/OOPS_InterviewPrep/assets/86497126/38273da1-71ad-4f25-95e2-ec15511976e4)
+
+## Access Control
+ - Private vs Public vs Protected
+ - You can't directly access Private Elements of a class by its objects. You have to use getters and setters. So Private means only in that class. Private -> Only This Class
+ - You can access Public Elements anywhere. Public -> Can easily be accessed Everywhere
+ - You can access default elements inside the same package. Default -> Accessible only in the same package
+ - Protected -> not accessible outside the package unless it is a subclass of this class.
+   ![image](https://github.com/arey-pranay/OOPS_InterviewPrep/assets/86497126/c2ec93e8-f52e-4427-9a96-6cf71df71ffb)
