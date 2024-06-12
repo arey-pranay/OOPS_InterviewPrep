@@ -202,4 +202,14 @@ public class ST {
  - You can access Public Elements anywhere. Public -> Can easily be accessed Everywhere
  - You can access default elements inside the same package. Default -> Accessible only in the same package
  - Protected -> not accessible outside the package unless it is a subclass of this class.
+   
    ![image](https://github.com/arey-pranay/OOPS_InterviewPrep/assets/86497126/c2ec93e8-f52e-4427-9a96-6cf71df71ffb)
+
+## Abstract Classes
+ - Java doesn't allow Multiple Inheritence, due to possible naming conflicts.
+ - Abstract classes solve this by having abstract methods which have just the function signature and no function body.
+ -  ``` public abstract void career(name); ```
+ -  Any class having any abstract method must also be declared abstract. so it will be declared like: ``` public abstract class{..} ``` .
+ -  All child classes must be overriden by the child classes.
+ -  You cannot create objects of an abstract class.
+ -  You can't create abstract static method, but you can create static methods in abstract classes and call them with the class name, because static methods do no trequire objects to call them, and abstract methods don't have objects.
