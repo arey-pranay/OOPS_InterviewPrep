@@ -5,8 +5,10 @@
  - 84.5f converts it to float or somethign, ig
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
  - The @Override is called an annotation. It  is not mandatory but you should use it to catch any errors in namiing or signatures, at compile time
+ - What can be accessed is determined at compile time by LHS. Which and What exactly will be accessed is determined by the LHS at run-time.
+   
  ##  Doubts
- - What is "super" and access specifiers and wrapper classes exactly ?
+ - What are wrapper classes exactly ?
 
 ## Classes
 
@@ -213,3 +215,11 @@ public class ST {
  -  All child classes must be overriden by the child classes.
  -  You cannot create objects of an abstract class.
  -  You can't create abstract static method, but you can create static methods in abstract classes and call them with the class name, because static methods do no trequire objects to call them, and abstract methods don't have objects.
+ -  You cannot have final abstract classes because otherwise you will not be able to modify it (them).
+ -  Still you cannot do multiple inheritence.
+
+## Interface
+ - Functions by default are public and abstract.
+ - Variables by default are static and final.
+ - You can use multiple inhertance in interfaces.
+ - ClassA implements ClassB, ClassC
