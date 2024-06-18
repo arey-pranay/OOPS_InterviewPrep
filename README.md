@@ -222,4 +222,9 @@ public class ST {
  - Functions by default are public and abstract.
  - Variables by default are static and final.
  - You can use multiple inhertance in interfaces.
- - ClassA implements ClassB, ClassC
+ - ``` ClassA implements ClassB, ClassC ```
+ - You can extend one interface with using another interface
+ -  ``` InterfaceA extends InterfaceB ```
+ -  If a class implements an extended interface, then it'll have to implement the functions of both - the implemented interface, and the interface extended by the implemented interface.
+ -  "default" keyword can be used to give a default definition of any function in an interface, so that it is not compulsary to implement it.
+ - While implementing, the access modifier used must be same or more free and less restrictive than that present in the interface. Top level interface must be public or default. The nested interface can be public, private or protected.
