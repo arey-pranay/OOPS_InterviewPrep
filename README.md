@@ -9,7 +9,7 @@
    
  ##  Doubts
  - What are wrapper classes exactly ?
-
+ - What is amortized time complexity ?
 ## Classes
 
 Class is a blueprint or template of a real-world entity.
@@ -228,3 +228,79 @@ public class ST {
  -  If a class implements an extended interface, then it'll have to implement the functions of both - the implemented interface, and the interface extended by the implemented interface.
  -  "default" keyword can be used to give a default definition of any function in an interface, so that it is not compulsary to implement it.
  - While implementing, the access modifier used must be same or more free and less restrictive than that present in the interface. Top level interface must be public or default. The nested interface can be public, private or protected.
+
+## Generics
+ - Generics help us give parameterized types
+ - The thing that helps in-built data structures to take datatype as input while creating the instance of a class.
+ - The datatype must be a class, and not primitive. This is why you put Integer inside <>, and not int.
+ - ```
+
+
+
+public class CustomArrayList {
+
+    private int[] data;
+    private static int DEFAULT_SIZE = 10;
+    private int size = 0; // also working as index value
+
+    public CustomArrayList() {
+        this.data = new int[DEFAULT_SIZE];
+    }
+
+    public void add(int num) {
+        if (isFull()) {
+            resize();
+        }
+        data[size++] = num;
+    }
+
+    private void resize() {
+        int[] temp = new int[data.length * 2];
+
+        // copy the current items in the new array
+        for (int i = 0; i < data.length; i++) {
+            temp[i] = data[i];
+        }
+        data = temp;
+    }
+
+    private boolean isFull() {
+        return size == data.length;
+    }
+
+    public int remove() {
+        int removed = data[--size];
+        return removed;
+    }
+
+    public int get(int index) {
+        return data[index];
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public void set(int index, int value) {
+        data[index] = value;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomArrayList{" +
+                "data=" + Arrays.toString(data) +
+                ", size=" + size +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        CustomArrayList list = new CustomArrayList();
+        for (int i = 0; i < 14; i++) {
+            list.add(2 * i);
+        }
+        System.out.println(list);
+    }
+}
+
+   ```
+
