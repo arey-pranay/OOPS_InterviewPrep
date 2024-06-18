@@ -6,10 +6,13 @@
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
  - The @Override is called an annotation. It  is not mandatory but you should use it to catch any errors in namiing or signatures, at compile time
  - What can be accessed is determined at compile time by LHS. Which and What exactly will be accessed is determined by the LHS at run-time.
-   
+ - In shallow copies, the new variables are create in the copy only for the primitive datatype variables, but in case of objects the new copy will also point to the older object only. In a deep copy, always new objects are created for the copy.
+ - Vectors are synchronized and this be only accessed by a single thread, at a single point of time. This makes them thread-safe, but slower if compared with the ArrayLists.
+ - List is an interface which is implemented by ArrayList, LinkedList, Vector, Stack. That is why you cannot create objects of List<>(); and use ArrayList<>();
  ##  Doubts
  - What are wrapper classes exactly ?
  - What is amortized time complexity ?
+ - 
 ## Classes
 
 Class is a blueprint or template of a real-world entity.
@@ -233,11 +236,7 @@ public class ST {
  - Generics help us give parameterized types
  - The thing that helps in-built data structures to take datatype as input while creating the instance of a class.
  - The datatype must be a class, and not primitive. This is why you put Integer inside <>, and not int.
- - ```
-
-
-
-public class CustomArrayList {
+ - ``` public class CustomArrayList {
 
     private int[] data;
     private static int DEFAULT_SIZE = 10;
@@ -300,7 +299,53 @@ public class CustomArrayList {
         }
         System.out.println(list);
     }
-}
+} ```
 
-   ```
+## Lambda Functions 
+- Consumer<Integer> fun = (item) -> System.out.println(item * 2); arr.forEach(fun);
+- OR arr.forEach( (item) -> System.out.println(item * 2));
+- They are single lined functions that don't need to be named.
+
+## Exception Handing
+- Exceptions can be handled, unlike error.
+- DivisionByZero is exception, unlike StackOverflow.
+- Exceptions are recoverable, unlike error.
+- Exception just prevents the normal flow of program, unlike error.
+- There are 2 types of exceptions:
+   - Unchecked: RunTime
+   - Checked: Compile Time
+ - Keywords used: try, catch, finally, throw, throws
+``` package com.kunal.exceptionHandling;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 0;
+        try {
+//            divide(a, b);
+            // mimicing
+            String name = "Kunal";
+            if (name.equals("Kunal")) {
+                throw new MyException("name is kunal");
+            }
+        } catch (MyException e) {
+            System.out.println(e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("normal exception");
+        } finally {
+            System.out.println("this will always execute");
+        }
+
+    }
+
+    static int divide(int a, int b) throws ArithmeticException{
+        if (b == 0) {
+            throw new ArithmeticException("please do no divide by zero");
+        }
+
+        return  a / b;
+    }
+} ```
 
