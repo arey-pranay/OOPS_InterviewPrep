@@ -2,17 +2,17 @@
 ## Extra
  - All classes extend the "Object" class.
  - Objects have "null" value by default ( including String )
- - 84.5f converts it to float or somethign, ig
+ - 84.5f converts to float 
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
- - The @Override is called an annotation. It  is not mandatory but you should use it to catch any errors in namiing or signatures, at compile time
- - What can be accessed is determined at compile time by LHS. Which and What exactly will be accessed is determined by the LHS at run-time.
- - In shallow copies, the new variables are create in the copy only for the primitive datatype variables, but in case of objects the new copy will also point to the older object only. In a deep copy, always new objects are created for the copy.
- - Vectors are synchronized and this be only accessed by a single thread, at a single point of time. This makes them thread-safe, but slower if compared with the ArrayLists.
+ - The @Override is called an annotation. It  is not mandatory but you should use it to catch any errors in naming or signatures, at compile time
+ - What can be accessed is determined at compile time by LHS. Which and What exactly will be accessed is determined by the RHS at run-time.
+ - In shallow copies, the new variables are created in the copy only for the primitive datatype variables, but in case of objects the new copy will also point to the older object only. In a deep copy, always new objects are created for the copy.
+ - Vectors are synchronized and this can be only accessed by a single thread, at a single point of time. This makes them thread-safe, but slower if compared with the ArrayLists.
  - List is an interface which is implemented by ArrayList, LinkedList, Vector, Stack. That is why you cannot create objects of List<>(); and use ArrayList<>();
  ##  Doubts
  - What are wrapper classes exactly ?
  - What is amortized time complexity ?
- - 
+
 ## Classes
 
 Class is a blueprint or template of a real-world entity.
