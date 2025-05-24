@@ -2,7 +2,8 @@
 ## Extra
  - All classes extend the "Object" class.
  - Objects have "null" value by default ( including String )
- - 84.5f converts to float 
+ - 84.5f converts to float
+ - If a class implements an interface, then it is mandatory for it to implement all the methofs of that interface.
  - In java, reference variables are always passed by value, and objects are always passed by reference. That's why the swap function also does not work normally.
  - The @Override is called an annotation. It  is not mandatory but you should use it to catch any errors in naming or signatures, at compile time
  - What can be accessed is determined at compile time by LHS. Which and What exactly will be accessed is determined by the RHS at run-time.
